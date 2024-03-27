@@ -46,23 +46,9 @@ def order_paid(request, order_id):
         return Response("Заказ уже оплачен!")
     else:
         order.paid = True
+
         order.save()
         return Response("Оплата принята!")
-
-
-@api_view(['GET'])
-def order_delivery(request, order_id):
-    """
-    Изменение статуса доставки заказа по ID.
-    """
-    order = get_object_or_404(Order, id=order_id)
-    if order.delivery:
-        order.paid = False
-        order.save()
-        return Response("Статус изменен на самовывоз")
-    else:
-        return Response("Статус уже самовывоз!")
-
 
 @api_view(['POST'])
 def cart_add(request, product_id):

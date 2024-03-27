@@ -25,7 +25,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
     path('api/', include('products.urls')),
     path('api/', include('orders.urls')),

@@ -10,7 +10,7 @@ from .models import CustomUser
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
+class CustomUserViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]

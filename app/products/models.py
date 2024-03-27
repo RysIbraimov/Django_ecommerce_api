@@ -14,6 +14,7 @@ class Category(models.Model):
     description = models.TextField(null=True, blank=True, verbose_name="Описание")
 
     class Meta:
+        app_label = 'products'
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
 
@@ -32,6 +33,7 @@ class Product(models.Model):
     updated_date = models.DateTimeField(auto_now=True, verbose_name="Дата изменения")
 
     class Meta:
+        app_label = 'products'
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
 
@@ -47,6 +49,7 @@ class ProductReview(models.Model):
                                             null=True, blank=True, verbose_name="Оценка")
 
     class Meta:
+        app_label = 'products'
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
 
