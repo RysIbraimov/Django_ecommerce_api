@@ -12,13 +12,6 @@ Installation
 Requirements
 Docker
 Docker Compose
-Steps
-Clone the repository:
-
-git clone https://github.com/your-username/django-ecommerce-api.git
-Navigate to the project directory:
-
-Make the entrypoint.sh script executable (for Unix users):
 
 chmod +x app/entrypoint.sh
 Build and run the Docker containers:
