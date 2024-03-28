@@ -1,34 +1,41 @@
-Django E-commerce API
+# Django E-commerce API
 This Django project provides a RESTful API for an e-commerce platform. It includes endpoints for managing products, orders, user authentication, and more.
 
-Features
+## Features
 CRUD operations for products
 Ordering and filtering products
 Creating and managing orders
 User registration, login, and logout
 JWT token-based authentication
 
-Installation
+## Installation
 Requirements
 Docker
 Docker Compose
+For unix users
+```bash
+    chmod +x app/entrypoint.prod.sh
+```
 
-chmod +x app/entrypoint.prod.sh
 Build and run the Docker containers:
-
-docker compose -f docker-compose.prod.yml down -v
-docker compose -f docker-compose.prod.yml up -d --build
+```bash
+  docker compose -f docker-compose.prod.yml down -v
+  docker compose -f docker-compose.prod.yml up -d --build
+```
 Collect static files:
-
-docker compose -f docker-compose.prod.yml exec web python manage.py collectstatic --noinput
+```bash
+  docker compose -f docker-compose.prod.yml exec web python manage.py collectstatic --noinput
+```
 Apply migrations:
-
-docker compose -f docker-compose.prod.yml exec web python manage.py migrate
+```bash
+  docker compose -f docker-compose.prod.yml exec web python manage.py migrate
+```
 Create a superuser (for admin access):
-
+```bash
 docker compose -f docker-compose.prod.yml exec web python manage.py createsuperuser
+```
 
-Usage
+## Usage
 Access the API root at http://127.0.0.1:80/swagger/
 Explore available endpoints for products, orders, and users
 Use tools like Postman or cURL to make requests to the API
