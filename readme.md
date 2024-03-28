@@ -13,7 +13,7 @@ Requirements
 Docker
 Docker Compose
 
-chmod +x app/entrypoint.sh
+chmod +x app/entrypoint.prod.sh
 Build and run the Docker containers:
 
 docker compose -f docker-compose.prod.yml down -v
