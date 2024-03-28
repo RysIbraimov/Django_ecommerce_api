@@ -27,9 +27,9 @@ schema_view = get_schema_view(
 urlpatterns = [
     # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
-    path('api/', include('products.urls')),
-    path('api/', include('orders.urls')),
-    path('api/', include('users.urls')),
+    path('api/orders/', include('orders.urls')),
+    path('api/users/', include('users.urls')),
+    path('api/products/', include('products.urls')),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
